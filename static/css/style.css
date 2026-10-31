@@ -63,3 +63,29 @@ header .brand img {
     height: auto;
     object-fit: contain;
 }
+
+/* 顶部品牌区域整体居中 */
+header .brand {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+/* 顶部 Logo 图片放大 */
+header .brand img {
+    width: auto;
+    height: 110px !important;  /* 控制 Logo 大小 */
+    max-width: 100%;
+    object-fit: contain;
+}
+
+/* 手机端自适应 */
+@media (max-width: 768px) {
+    header .brand img {
+        height: 75px !important;
+    }
+}
+
