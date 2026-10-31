@@ -51,8 +51,8 @@ img {
 */
 
 .topbar {
-    height: 136px;
-    min-height: 136px;
+    height: 110px;
+    min-height: 110px;
     padding: 0 5%;
     display: flex;
     align-items: center;
