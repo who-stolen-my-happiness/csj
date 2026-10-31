@@ -58,34 +58,61 @@ header .brand {
     text-align: center;
 }
 
-/* 保持 Logo 图片比例 */
-header .brand img {
-    height: auto;
-    object-fit: contain;
+
+/* ===== 顶部导航栏高度与品牌放大 ===== */
+
+/* 顶部导航栏 */
+.site-header,
+header.site-header {
+    min-height: 130px !important;
 }
 
-/* 顶部品牌区域整体居中 */
-header .brand {
+/* 顶部导航内容 */
+.site-header .container,
+.site-header .nav-inner,
+.site-header .header-inner {
+    min-height: 130px !important;
+    display: flex;
+    align-items: center;
+}
+
+/* Logo 与文字整体 */
+.site-header .brand,
+.site-header .brand-lockup {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 100%;
-    margin: 0 auto;
-    text-align: center;
+    gap: 18px;
+    transform: scale(1.5);
+    transform-origin: center center;
 }
 
-/* 顶部 Logo 图片放大 */
-header .brand img {
+/* 如果 Logo 是独立图片 */
+.site-header .brand img,
+.site-header .brand-lockup img {
+    max-height: 90px;
     width: auto;
-    height: 110px !important;  /* 控制 Logo 大小 */
-    max-width: 100%;
     object-fit: contain;
 }
 
-/* 手机端自适应 */
+/* 手机端保持适配 */
 @media (max-width: 768px) {
-    header .brand img {
-        height: 75px !important;
+    .site-header,
+    header.site-header {
+        min-height: 95px !important;
+    }
+
+    .site-header .container,
+    .site-header .nav-inner,
+    .site-header .header-inner {
+        min-height: 95px !important;
+    }
+
+    .site-header .brand,
+    .site-header .brand-lockup {
+        transform: scale(1.15);
+        gap: 8px;
     }
 }
+
 
