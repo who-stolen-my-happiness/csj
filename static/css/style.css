@@ -80,8 +80,8 @@ img {
 /* CSJ 图标 */
 .topbar .brand-logo {
     display: block;
-    width: 135px;
-    height: 86px;
+    width: 155px;
+    height: 100px;
     max-width: none;
     object-fit: contain;
     flex-shrink: 0;
