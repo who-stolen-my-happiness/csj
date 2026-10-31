@@ -66,57 +66,23 @@ img {
 .topbar .brand {
     position: absolute;
     left: 50%;
-    transform: translateX(-50%);
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    top: 50%;
+    transform: translate(-50%, -50%);
     gap: 22px;
-    width: max-content;
-    max-width: 75%;
-    margin: 0;
-    text-align: left;
 }
 
-/* CSJ 图标 */
 .topbar .brand-logo {
-    display: block;
-    width: 155px;
-    height: 100px;
-    max-width: none;
+    width: 165px;
+    height: 110px;
     object-fit: contain;
-    flex-shrink: 0;
-    filter: drop-shadow(0 1px 5px rgba(0,0,0,.1));
 }
 
-/* 如使用文字 Logo，保留原有样式 */
-.brand-mark {
-    border: 1.5px solid #67bfff;
-    color: #fff;
-    padding: 9px 5px;
-    font-size: 15px;
-    font-weight: 800;
-    letter-spacing: 0;
-}
-
-/* 中文公司名称 */
 .topbar .brand strong {
-    display: block;
-    font-size: 29px;
-    font-weight: 800;
-    letter-spacing: 3px;
-    line-height: 1.3;
-    white-space: nowrap;
+    font-size: 34px;
 }
 
-/* 英文公司名称 */
 .topbar .brand small {
-    display: block;
-    font-size: 13px;
-    letter-spacing: 2.5px;
-    line-height: 1.5;
-    color: #9bb8cd;
-    margin-top: 6px;
-    white-space: nowrap;
+    font-size: 15px;
 }
 
 /* 分享二维码按钮 */
