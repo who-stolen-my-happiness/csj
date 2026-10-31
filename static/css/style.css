@@ -83,7 +83,7 @@ header.site-header {
     align-items: center;
     justify-content: center;
     gap: 18px;
-    transform: scale(1.5);
+    transform: scale(2.5);
     transform-origin: center center;
 }
 
@@ -110,7 +110,7 @@ header.site-header {
 
     .site-header .brand,
     .site-header .brand-lockup {
-        transform: scale(1.15);
+        transform: scale(1.55);
         gap: 8px;
     }
 }
