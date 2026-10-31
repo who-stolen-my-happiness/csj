@@ -42,3 +42,24 @@ img{max-width:100%;height:auto}
 @media(max-width:720px){
   .footer .footer-logo{width:min(360px,92vw);margin-top:26px;padding:16px 12px}
 }
+
+/* 顶部 Logo 和公司名称整体居中 */
+header .container {
+    position: relative;
+}
+
+header .brand {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+/* 保持 Logo 图片比例 */
+header .brand img {
+    height: auto;
+    object-fit: contain;
+}
