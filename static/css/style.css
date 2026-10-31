@@ -63,12 +63,63 @@ img {
 }
 
 /* Logo + 中英文名称整体居中 */
+/* Logo + 中英文名称整体水平、垂直居中 */
 .topbar .brand {
     position: absolute;
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+
     gap: 22px;
+    width: max-content;
+    max-width: 75%;
+    margin: 0;
+    text-align: left;
+}
+
+/* 中文、英文名称作为一个整体，竖向排列 */
+.topbar .brand > span {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+/* Logo */
+.topbar .brand-logo {
+    display: block;
+    width: 165px;
+    height: 110px;
+    max-width: none;
+    object-fit: contain;
+    flex-shrink: 0;
+}
+
+/* 中文 */
+.topbar .brand strong {
+    display: block;
+    font-size: 34px;
+    font-weight: 800;
+    letter-spacing: 3px;
+    line-height: 1.25;
+    white-space: nowrap;
+}
+
+/* 英文 */
+.topbar .brand small {
+    display: block;
+    font-size: 15px;
+    letter-spacing: 2px;
+    line-height: 1.5;
+    margin-top: 5px;
+    color: #9bb8cd;
+    white-space: nowrap;
 }
 
 .topbar .brand-logo {
@@ -819,6 +870,11 @@ img {
    14. 手机端导航栏
    ========================================= */
 
+
+/* =========================================
+   14. 手机端导航栏
+   ========================================= */
+
 @media (max-width: 768px) {
 
     .topbar {
@@ -827,29 +883,58 @@ img {
         padding: 0 12px;
     }
 
+    /* Logo 和中英文名称整体排列 */
     .topbar .brand {
+        position: absolute;
         left: 12px;
-        transform: none;
+        top: 50%;
+        transform: translateY(-50%);
+
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: flex-start;
+
         gap: 8px;
         max-width: calc(100% - 112px);
     }
 
+    /* 中文与英文上下排列 */
+    .topbar .brand > span {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+    }
+
+    /* CSJ Logo */
     .topbar .brand-logo {
         width: 64px;
         height: 48px;
+        flex-shrink: 0;
+        object-fit: contain;
     }
 
+    /* 中文名称 */
     .topbar .brand strong {
+        display: block;
         font-size: 16px;
         letter-spacing: 1px;
+        line-height: 1.3;
+        white-space: nowrap;
     }
 
+    /* 英文名称 */
     .topbar .brand small {
+        display: block;
         font-size: 8px;
-        letter-spacing: .8px;
+        letter-spacing: 0.8px;
+        line-height: 1.4;
         margin-top: 3px;
+        white-space: nowrap;
     }
 
+    /* 分享二维码按钮 */
     .topbar .top-link {
         font-size: 10px;
         padding: 8px;
